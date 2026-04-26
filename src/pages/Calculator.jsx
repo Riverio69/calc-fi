@@ -42,7 +42,9 @@ export default function Calculator() {
       `Arvioitu budjetti: €${total.toLocaleString()}`,
     ].join('\n');
 
-    alert(message);
+    const phone = '358414994207';
+    const encoded = encodeURIComponent(message);
+    window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
   };
 
   return (
